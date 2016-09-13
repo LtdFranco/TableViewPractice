@@ -7,6 +7,8 @@
 //
 
 #import "MKChatRoomViewController.h"
+#import "MKChatRoom.h"
+
 
 @interface MKChatRoomViewController ()
 
@@ -16,6 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MKChatRoom *coview =(MKChatRoom*) self.view;
+    
+    CGRect screenFrame=[UIScreen mainScreen].bounds;
+    screenFrame.origin.y=20;
+    screenFrame.size.height=screenFrame.size.height-20;
+    [self.view setBounds: [UIScreen mainScreen].bounds];
+    
     // Do any additional setup after loading the view.
 }
 
