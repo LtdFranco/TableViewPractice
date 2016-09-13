@@ -16,6 +16,9 @@
 		9D1CDFB61D8826AD00623CA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1CDFB41D8826AD00623CA6 /* LaunchScreen.storyboard */; };
 		9D1CDFC11D8826AD00623CA6 /* ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CDFC01D8826AD00623CA6 /* ChatTests.m */; };
 		9D1CDFCC1D8826AD00623CA6 /* ChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CDFCB1D8826AD00623CA6 /* ChatUITests.m */; };
+		9D1CDFDC1D882C7600623CA6 /* MKChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CDFDB1D882C7600623CA6 /* MKChatRoomViewController.m */; };
+		9D1CDFDF1D882CC300623CA6 /* MKChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CDFDE1D882CC300623CA6 /* MKChatRoom.m */; };
+		9D1CDFE11D882CE500623CA6 /* MKChatRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D1CDFE01D882CE500623CA6 /* MKChatRoomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		9D1CDFC71D8826AD00623CA6 /* ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1CDFCB1D8826AD00623CA6 /* ChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatUITests.m; sourceTree = "<group>"; };
 		9D1CDFCD1D8826AD00623CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D1CDFDA1D882C7600623CA6 /* MKChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKChatRoomViewController.h; path = ChatRoom/MKChatRoomViewController.h; sourceTree = "<group>"; };
+		9D1CDFDB1D882C7600623CA6 /* MKChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKChatRoomViewController.m; path = ChatRoom/MKChatRoomViewController.m; sourceTree = "<group>"; };
+		9D1CDFDD1D882CC300623CA6 /* MKChatRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKChatRoom.h; path = ChatRoom/MKChatRoom.h; sourceTree = "<group>"; };
+		9D1CDFDE1D882CC300623CA6 /* MKChatRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKChatRoom.m; path = ChatRoom/MKChatRoom.m; sourceTree = "<group>"; };
+		9D1CDFE01D882CE500623CA6 /* MKChatRoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MKChatRoomView.xib; path = ChatRoom/MKChatRoomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		9D1CDFA21D8826AD00623CA6 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9D1CDFD91D882B9D00623CA6 /* ChatRoom */,
 				9D1CDFA61D8826AD00623CA6 /* AppDelegate.h */,
 				9D1CDFA71D8826AD00623CA6 /* AppDelegate.m */,
 				9D1CDFA91D8826AD00623CA6 /* ViewController.h */,
@@ -141,6 +150,18 @@
 				9D1CDFCD1D8826AD00623CA6 /* Info.plist */,
 			);
 			path = ChatUITests;
+			sourceTree = "<group>";
+		};
+		9D1CDFD91D882B9D00623CA6 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				9D1CDFDA1D882C7600623CA6 /* MKChatRoomViewController.h */,
+				9D1CDFDB1D882C7600623CA6 /* MKChatRoomViewController.m */,
+				9D1CDFDD1D882CC300623CA6 /* MKChatRoom.h */,
+				9D1CDFDE1D882CC300623CA6 /* MKChatRoom.m */,
+				9D1CDFE01D882CE500623CA6 /* MKChatRoomView.xib */,
+			);
+			name = ChatRoom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +231,7 @@
 				TargetAttributes = {
 					9D1CDF9F1D8826AD00623CA6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MH9NHAC874;
 					};
 					9D1CDFBB1D8826AD00623CA6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -249,6 +271,7 @@
 				9D1CDFB61D8826AD00623CA6 /* LaunchScreen.storyboard in Resources */,
 				9D1CDFB31D8826AD00623CA6 /* Assets.xcassets in Resources */,
 				9D1CDFAE1D8826AD00623CA6 /* Main.storyboard in Resources */,
+				9D1CDFE11D882CE500623CA6 /* MKChatRoomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1CDFDF1D882CC300623CA6 /* MKChatRoom.m in Sources */,
+				9D1CDFDC1D882C7600623CA6 /* MKChatRoomViewController.m in Sources */,
 				9D1CDFAB1D8826AD00623CA6 /* ViewController.m in Sources */,
 				9D1CDFB11D8826AD00623CA6 /* Chat.xcdatamodeld in Sources */,
 				9D1CDFA81D8826AD00623CA6 /* AppDelegate.m in Sources */,
@@ -417,10 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leediancn.franco.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -428,10 +456,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leediancn.franco.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -500,6 +531,7 @@
 				9D1CDFD21D8826AD00623CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D1CDFD31D8826AD00623CA6 /* Build configuration list for PBXNativeTarget "ChatTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +540,7 @@
 				9D1CDFD51D8826AD00623CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D1CDFD61D8826AD00623CA6 /* Build configuration list for PBXNativeTarget "ChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +549,7 @@
 				9D1CDFD81D8826AD00623CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

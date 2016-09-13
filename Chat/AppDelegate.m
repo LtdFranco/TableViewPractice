@@ -5,6 +5,7 @@
 //  Created by franco on 2016/9/13.
 //  Copyright © 2016年 franco. All rights reserved.
 //
+#import "MKChatRoomViewController.h"
 
 #import "AppDelegate.h"
 
@@ -16,7 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.viewController = [[MKChatRoomViewController alloc] initWithNibName:@"MKChatRoomView" bundle:nil];
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+    
+    
+    
+    
     return YES;
 }
 
